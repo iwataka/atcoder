@@ -2,12 +2,6 @@
 
 My practice codes for [Atcoder](https://atcoder.jp).
 
-## Beginner
-
-### 132
-
-- Small Products
-
 ## Regular
 
 ### 098
