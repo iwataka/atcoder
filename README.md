@@ -6,7 +6,6 @@ My practice codes for [Atcoder](https://atcoder.jp).
 
 ### 098
 
-- [Range Minimum Queries](https://atcoder.jp/contests/arc098/tasks/arc098_c): WA
 - Donation
 
 ## Grand

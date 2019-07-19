@@ -1,32 +1,32 @@
-def split_by_floor(arr, floor):
-    ans = []
+def solve(N, K, Q, As, X):
+    mins = []
     tmp = []
-    for e in arr:
-        if e < floor and tmp:
-            ans.append(tmp)
-            tmp = []
+    for A in As:
+        if A >= X:
+            tmp.append(A)
         else:
-            tmp.append(e)
-    if tmp:
-        ans.append(tmp)
-    return ans
+            if len(tmp) >= K:
+                tmp.sort()
+                mins.extend(tmp[:len(tmp)-K+1])
+            tmp = []
+    if len(tmp) >= K:
+        tmp.sort()
+        mins.extend(tmp[:len(tmp)-K+1])
+
+    if len(mins) < Q:
+        return None
+    mins.sort()
+    taken = mins[:Q]
+    return taken[-1] - taken[0]
+
 
 N, K, Q = map(int, input().split())
-arr = [int(x) for x in input().split()]
+As = [int(x) for x in input().split()]
 
-floor_cands = list(sorted(set(arr)))
-ans = floor_cands[-1] - floor_cands[0]
-
-for floor in floor_cands:
-    splitted_arrs = split_by_floor(arr, floor)
-    cands = []
-    for splitted in splitted_arrs:
-        cands.extend(sorted(splitted)[:len(splitted) - K + 1])
-    if len(cands) < Q:
-        continue
-    sorted_cands = list(sorted(cands))
-    tmp_ans = sorted_cands[Q - 1] - sorted_cands[0]
-    if ans > tmp_ans:
-        ans = tmp_ans
+ans = -1
+for A in As:
+    cand = solve(N, K, Q, As, A)
+    if cand is not None and (ans == -1 or ans > cand):
+        ans = cand
 
 print(ans)
