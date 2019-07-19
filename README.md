@@ -6,7 +6,6 @@ My practice codes for [Atcoder](https://atcoder.jp).
 
 ### 132
 
-- [Hopscotch Addict](https://atcoder.jp/contests/abc132/tasks/abc132_e): TLE
 - Small Products
 
 ## Regular
