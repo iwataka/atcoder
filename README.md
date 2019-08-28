@@ -2,15 +2,17 @@
 
 My practice codes for [Atcoder](https://atcoder.jp).
 
-## Regular
+## Remaining problems
 
-### 098
+### Regular
+
+#### 098
 
 - Donation
 
-## Grand
+### Grand
 
-### 025
+#### 025
 
 - [RGB Coloring](https://atcoder.jp/contests/agc025/tasks/agc025_b): TLE
 - [Interval Game](https://atcoder.jp/contests/agc025/tasks/agc025_c): TLE
